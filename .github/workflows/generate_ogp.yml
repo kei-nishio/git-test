@@ -19,3 +19,13 @@ on:
           - LP
           - 比較表
           - SNS告知
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 入力内容の確認
+        run: |
+          echo "タイトル: ${{ github.event.inputs.title }}"
+          echo "背景色: ${{ github.event.inputs.bgColor }}"
+          echo "種別: ${{ github.event.inputs.type }}"

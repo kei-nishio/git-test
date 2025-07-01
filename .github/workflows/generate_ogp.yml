@@ -1,0 +1,21 @@
+name: Generate OGP Image
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: '画像に入れるタイトル'
+        required: true
+        default: 'デフォルトタイトル'
+      bgColor:
+        description: '背景色（例: #ffffff）'
+        required: false
+        default: '#f8f8f8'
+      type:
+        description: '出力種別'
+        required: true
+        type: choice
+        options:
+          - LP
+          - 比較表
+          - SNS告知
